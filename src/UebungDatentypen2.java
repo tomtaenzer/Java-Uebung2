@@ -1,28 +1,13 @@
 public class UebungDatentypen2 {
     public static void main(String[] args){
 
-    int var1 = 4;
-    int var2 = 5;
-    int var3 = 101;
-    boolean result;
+    String word = "fancyfurniture";
 
-    result = var1 < var2;
-        System.out.println(result);
+    boolean var1 = isFancy(word);
+        System.out.println(var1);
 
-    result = var1 > var2;
-        System.out.println(result);
-
-     result = var1 == var2;
-        System.out.println(result);
-
-        int ergebnis1 = add(var1, var2);
-        System.out.println(ergebnis1);
-
-        ausgabe(ergebnis1);
-
-        boolean ergebnis3 = test(var3);
-        System.out.println(ergebnis3);
-
+    boolean var2 = longerThen20(word);
+        System.out.println(var2);
 
     }
     // Methode 1 "add" gibt Summe von zwei Summanden aus
@@ -44,4 +29,18 @@ public class UebungDatentypen2 {
         boolean prüfung = testat > festeGröße;
         return prüfung;
     }
+
+    public static boolean isFancy(String checkFancy){
+        boolean result = checkFancy.contains("fancy");
+        return result;
+    }
+
+    public static boolean longerThen20(String charCount){
+        boolean longer;
+        int chars = charCount.length();
+        longer = chars > 20;
+        return longer;
+
+    }
+
 }
